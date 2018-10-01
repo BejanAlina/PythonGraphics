@@ -8,7 +8,7 @@ class RepeatTimer(QtCore.QTimer):
     timeoutCounter = QtCore.Signal(int)
     endRepeat = QtCore.Signal()
 
-    def __init__(self, numberOfRepeats = 1, delay=10):
+    def __init__(self, numberOfRepeats=1, delay=10):
         QtCore.QTimer.__init__(self)
         self.__numberOfRepeats = 1
         self.numberOfRepeats = numberOfRepeats
@@ -117,6 +117,7 @@ class AnimButton(QPushButton):
 
     def playAnim(self):
         self._timer.start()
+
 
 def main():
     app = QApplication([])
